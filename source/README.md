@@ -43,20 +43,35 @@
 # Model-Driven Design
 * Define model within [Bounded Context](#bounded-context)
 * model gives structure to [Ubiquitous Language](#ubiquitous-language)
-* express model with [Services](#Services)
-* express change with [Domain Events](#Domain-Events)
-* express identity with [Entities](#Entities)
-* express state and computation with [Value Objects](#Value-Objects)
-* isolate domain expressions with [Layered Architecture](#Layered-Architecture)
+* express model with [Services](#services)
+* express change with [Domain Events](#domain-events)
+* express identity with [Entities](#entities)
+* express state and computation with [Value Objects](#value-objects)
+* isolate domain expressions with [Layered Architecture](#layered-architecture)
 
 ## Services
+
 ## Domain Events
+
 ## Entities
+* push state change with [Domain Events](#domain-events)
+* access with [Repositories](#repositories)
+* encapsulate with [Aggregates](#aggregates)
+* act as root of [Aggregates](#aggregates)
+* encapsulate with [Factories](#factories)
+
 ## Value Objects
-* Encapsulate with [test](#Factories)
+* Encapsulate with [Factories](#factories)
+* encapsulate with [Aggregates](#aggregates)
+
 ## Factories
+
 ## Layered Architecture
 
+## Repositories
+
+## Aggregates
+* access with [Repositories](#repositories)
 
 
 
