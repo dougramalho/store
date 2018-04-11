@@ -66,6 +66,15 @@
 
 ## Factories
 
+Factories sometimes are used as Factory Methods, so the static factory method let us get an Association without instantiating it directly.
+It returns the association instance we want.
+E.g.
+```
+var association = Association.Create(parameters)
+```
+
+> Steve Smith - [Twitter](https://twitter.com/ardalis)
+
 ## Layered Architecture
 
 ## Repositories
