@@ -73,6 +73,8 @@ E.g.
 var association = Association.Create(parameters)
 ```
 
+Factory methods help to avoid entities being in an inconsistent state.
+
 > Steve Smith - [Twitter](https://twitter.com/ardalis)
 
 ## Layered Architecture
