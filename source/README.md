@@ -13,6 +13,11 @@
 * Shipping
 * Inventory
 
+Subdomain would have been implemented as a clean Bounded Context. There is three types of subdomains, they are:
+* Core domain
+* Supporting Subdomain
+* Generic Subdomain
+
 ## Bounded Context
 * Names enter Ubiquitous Language
 * Keep model unified by Continuous Integration
