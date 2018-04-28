@@ -1,19 +1,42 @@
-﻿Tudo que a seta chega deve ficar dentro
+﻿# Ubiquitous Language
 
-# Ubiquitous Language
+## Domain
+
+## Core Domain
+* Cultivate rich model with Ubiquitous Language
+
+## Subdomain
+
+* Product Catalog
+* Orders
+* Invoicing
+* Shipping
+* Inventory
+
+Subdomain would have been implemented as a clean Bounded Context. There is three types of subdomains, they are:
+* Core domain
+* Supporting Subdomain
+* Generic Subdomain
 
 ## Bounded Context
 * Names enter Ubiquitous Language
 * Keep model unified by Continuous Integration
 
+A single Bounded Context does not necessarily fall within only a single Subdomain,
+but it may. - Vaughn
 
-## Core Domain
-* Cultivate rich model with Ubiquitous Language
 
 ### Generic Subdomains
 * Avoid overinvesting in subdomains
 
 # Context Map
+
+* Shop context, Product Catalog
+* Purchase context, Orders, Invoicing 
+* Delivery context, Shipping
+* Maintenance Context, Inventory
+* Security context, security
+
 
 ## Big Ball of Mud
 * Segregate the conceptual messes
