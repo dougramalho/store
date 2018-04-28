@@ -23,8 +23,14 @@ My initial play was to select one friend and put him in the role of client, but 
 
 So, I will be the domain expert at this point, it's far away from the best scenario, but we need to solve this little problem.
 
-My store needs to be beautiful and I want my clients to be able to browse the store in the best possible way, everything needs to load very fast. If my store for some reason gets slow, in this specific second I lose my client, I do not want to take this risk. 
+* The users don't need to be logged in to browse the catalog
+* The users can type some text to search products
+* When filtered, the results should be displayed with options to see the details or directly add to carts 
+* The users can add products to their cart at the result page or details page
+* The users can see on any page the cart total
+* Every page must show a button to proceed to checkout
+* The checkout page must show the products on the cart, the total and options to increase or decrease the amount of each good
+* the user needs to inform the shipping details before the payment
+* The store needs to verify that the user is logged in, and allow to register to finalize the purchase
+* After filling the payment, the store will send an e-mail with the order and finalize the purchase
 
-The clients can filter products with some description, and add products to their cart at any time.
-
-My customers can add products to their cart and when ready, finalizing the purchase.
