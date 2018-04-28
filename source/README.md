@@ -7,11 +7,13 @@
 
 ## Subdomain
 
-* Product Catalog
-* Orders
-* Invoicing
-* Shipping
-* Inventory
+* Product Catalog - use Product Catalog Context
+* Customer - Customer Context
+* Orders - Purchase Context
+* Invoicing - Purchase Context
+* Shipping - Shipping Context
+* Authentication - Security Context
+* Authorization - Security Context
 
 Subdomain would have been implemented as a clean Bounded Context. There is three types of subdomains, they are:
 * Core domain
@@ -31,11 +33,13 @@ but it may. - Vaughn
 
 # Context Map
 
-* Shop context, Product Catalog
-* Purchase context, Orders, Invoicing 
-* Delivery context, Shipping
-* Maintenance Context, Inventory
-* Security context, security
+* Product Catalog Context
+* Purchase Context
+* Shipping Context
+* Security Context
+* Customer Context
+
+![Working in Progress](https://drive.google.com/file/d/1-gAnEVe9RQBXWVTl3mlXy23Uuuoz1ZIr/view?usp=sharing)
 
 
 ## Big Ball of Mud
