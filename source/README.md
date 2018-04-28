@@ -39,7 +39,7 @@ but it may. - Vaughn
 * Security Context
 * Customer Context
 
-![Working in Progress](https://drive.google.com/file/d/1-gAnEVe9RQBXWVTl3mlXy23Uuuoz1ZIr/view?usp=sharing)
+![Working in Progress](https://drive.google.com/file/d/1WgBmGfj-PEgW3yDOwXSM-7N3ZGbnfdW6/view?usp=sharing)
 
 
 ## Big Ball of Mud
