@@ -14,10 +14,11 @@ namespace Store.Core.Domain
 
         protected Product(){}
 
-        public Product(string name, decimal price)
+        public Product(Guid id, string name, decimal price)
         {
             Name = name;
             Price = price;
+            Id = id;
         }
 
         public void AddDetail(string name, string value){
