@@ -179,23 +179,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Douglas\\.nuget\\packages\\": {},
+    "C:\\Users\\douglas.ramalho\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Projetos\\store\\source\\main\\Store.Core\\Store.Core.csproj",
+      "projectUniqueName": "d:\\projetos\\store\\source\\main\\Store.Core\\Store.Core.csproj",
       "projectName": "Store.Core",
-      "projectPath": "E:\\Projetos\\store\\source\\main\\Store.Core\\Store.Core.csproj",
-      "packagesPath": "C:\\Users\\Douglas\\.nuget\\packages\\",
-      "outputPath": "E:\\Projetos\\store\\source\\main\\Store.Core\\obj\\",
+      "projectPath": "d:\\projetos\\store\\source\\main\\Store.Core\\Store.Core.csproj",
+      "packagesPath": "C:\\Users\\douglas.ramalho\\.nuget\\packages\\",
+      "outputPath": "d:\\projetos\\store\\source\\main\\Store.Core\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Douglas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\douglas.ramalho\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -203,6 +203,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "http://srvm799:8080/tfs/ANTT/_packaging/FrameworkANTT/nuget/v3/index.json": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
