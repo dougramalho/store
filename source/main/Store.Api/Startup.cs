@@ -10,6 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Store.Core.Services;
 
 namespace Store.Api
 {
@@ -26,6 +27,9 @@ namespace Store.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
+            services.AddScoped<IProductService, ProductService>();
+            services.AddScoped<IProductDetailService, ProductDetailService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

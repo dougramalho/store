@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using Store.Core.DTO;
 using Store.Core.Repositories;
 
@@ -10,10 +11,12 @@ namespace Store.Core.Services
     public class ProductDetailService : IProductDetailService
     {
         private readonly IProductRepository _productRepository;
+        private readonly IMapper _mapper;
 
-        public ProductDetailService(IProductRepository productRepository)
+        public ProductDetailService(IProductRepository productRepository, IMapper mapper)
         {
             _productRepository = productRepository;
+            _mapper = mapper;
         }
 
         public async Task<IEnumerable<ProductDetailDTO>> GetAsync(string productName)
@@ -23,11 +26,7 @@ namespace Store.Core.Services
 
             foreach (var item in product.Details)
             {
-                detailsList.Add(new ProductDetailDTO()
-                {
-                    Name = item.Name,
-                    Value = item.Value
-                });
+                detailsList.Add(_mapper.Map<ProductDetailDTO>(item));
             }
 
             return detailsList;
