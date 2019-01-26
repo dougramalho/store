@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using Store.Core.Domain;
 using Store.Core.DTO;
 using Store.Core.Repositories;
@@ -11,21 +12,19 @@ namespace Store.Core.Services
     public class ProductService : IProductService
     {
         private readonly IProductRepository _productRepository;
+        private readonly IMapper _mapper;
 
-        public ProductService(IProductRepository productRepository)
+        public ProductService(IProductRepository productRepository, IMapper mapper)
         {
             _productRepository = productRepository;
+            _mapper = mapper;
         }
 
         public async Task<ProductDTO> GetAsync(string name)
         {
             var product = await _productRepository.GetOrFailAsync(name);
 
-            return new ProductDTO(){
-                Name = product.Name,
-                Price = product.Price,
-                Details = product.Details.Select(x => x.Name).ToList()
-            };
+            return _mapper.Map<ProductDTO>(product);
         }
 
         public async Task<IEnumerable<string>> GetnamesAsync()
@@ -37,7 +36,7 @@ namespace Store.Core.Services
 
             if (product != null)
             {
-                throw new Exception($"Product: {name} already exists.");
+                throw new StoreException("product_already_exists", $"Product: {name} already exists.");
             }
             
             product = new Product(Guid.NewGuid(), name, price);

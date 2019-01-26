@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
+using Store.Core.Domain;
 using Store.Core.DTO;
 using Store.Core.Repositories;
 
@@ -24,12 +25,14 @@ namespace Store.Core.Services
             var product = await _productRepository.GetOrFailAsync(productName);
             List<ProductDetailDTO> detailsList = new List<ProductDetailDTO>();
 
-            foreach (var item in product.Details)
-            {
-                detailsList.Add(_mapper.Map<ProductDetailDTO>(item));
-            }
+            // foreach (var item in product.Details)
+            // {
+            //     detailsList.Add(_mapper.Map<ProductDetailDTO>(item));
+            // }
 
-            return detailsList;
+            //var teste = detailsList.ProjectTo()
+
+            return _mapper.Map<IEnumerable<ProductDetail>, IEnumerable<ProductDetailDTO>>(product.Details);
         }
 
         public async Task<IEnumerable<string>> GetNamesAsync(string productName)

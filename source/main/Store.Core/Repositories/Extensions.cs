@@ -12,7 +12,7 @@ namespace Store.Core.Repositories
 
             if (product == null)
             {
-                throw new Exception($"Product: {name} was not found.");
+                throw new StoreException("product_not_found", $"Product: {name} was not found.");
             }
 
             return product;

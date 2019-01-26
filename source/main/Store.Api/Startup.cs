@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -10,6 +11,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Store.Core.Mappers;
+using Store.Core.Repositories;
 using Store.Core.Services;
 
 namespace Store.Api
@@ -28,8 +31,10 @@ namespace Store.Api
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
+            services.AddSingleton<IProductRepository, ProductRepository>();
             services.AddScoped<IProductService, ProductService>();
             services.AddScoped<IProductDetailService, ProductDetailService>();
+            services.AddSingleton<IMapper>(_ => AutoMapperConfig.GetMapper());
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
