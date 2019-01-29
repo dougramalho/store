@@ -1,11 +1,11 @@
 using System;
 
 namespace Store.Core.Domain {
-    public class Categorie : Entity {
+    public class Category : Entity {
         public string Name { get; protected set; }
-        protected Categorie () { }
+        protected Category () { }
 
-        public Categorie (Guid id, string name) {
+        public Category (Guid id, string name) {
             Name = name;
             Id = id;
         }

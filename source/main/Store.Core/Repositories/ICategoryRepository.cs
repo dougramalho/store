@@ -4,9 +4,9 @@ using Store.Core.Domain;
 
 namespace Store.Core.Repositories
 {
-    public interface ICategoriesRepository
+    public interface ICategoryRepository
     {
-         Task AddAsync(Categorie categorie);
+         Task AddAsync(Category categorie);
          Task<IEnumerable<string>> GetCategorieAsync();
     }
 }

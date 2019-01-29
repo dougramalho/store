@@ -5,11 +5,11 @@ using Store.Core.Domain;
 
 namespace Store.Core.Repositories
 {
-    public class CategoriesRepository : ICategoriesRepository
+    public class CategoryRepository : ICategoryRepository
     {
-        private readonly ISet<Categorie> _categories = new HashSet<Categorie>();
+        private readonly ISet<Category> _categories = new HashSet<Category>();
 
-        public async Task AddAsync(Categorie categorie)
+        public async Task AddAsync(Category categorie)
         {
             _categories.Add(categorie);
             await Task.CompletedTask;

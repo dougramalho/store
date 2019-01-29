@@ -10,6 +10,7 @@ namespace Store.Core.Domain
         private ISet<ProductDetail> _details = new HashSet<ProductDetail>();
         public string Name {get; protected set;}
         public decimal Price {get; protected set;}
+        
         public IEnumerable<ProductDetail> Details 
         {
             get => _details;
