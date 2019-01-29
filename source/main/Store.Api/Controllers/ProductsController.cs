@@ -30,7 +30,7 @@ namespace Store.Api.Controllers {
 
         [HttpPost ("{productName}")]
         public async Task<IActionResult> Post (string productName, [FromBody] ProductDTO product) {
-            await _productService.AddAsync (product.Name, product.Price);
+            await _productService.AddAsync (product.Name, product.Price, DateTime.Now, product.Featured);
             return Created ($"products/{productName}", null);
         }
 

@@ -30,7 +30,7 @@ namespace Store.Core.Services
         public async Task<IEnumerable<string>> GetnamesAsync()
         => await _productRepository.GetNamesAsync();
 
-        public async Task AddAsync(string name, decimal price)
+        public async Task AddAsync(string name, decimal price, DateTime publishedAt, bool featured)
         {
             var product = await _productRepository.GetAsync(name);
 
@@ -39,7 +39,7 @@ namespace Store.Core.Services
                 throw new StoreException("product_already_exists", $"Product: {name} already exists.");
             }
             
-            product = new Product(Guid.NewGuid(), name, price);
+            product = new Product(Guid.NewGuid(), name, price, publishedAt, featured);
             await _productRepository.AddAsync(product);
         }
 

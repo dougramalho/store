@@ -28,6 +28,12 @@ namespace Store.Api {
             services.AddMvc ().SetCompatibilityVersion (CompatibilityVersion.Version_2_2);
 
             services.AddSingleton<IProductRepository, ProductRepository> ();
+            services.AddSingleton<IBlogRepository, BlogRepository> ();
+            services.AddSingleton<IBlogService, BlogService> ();
+            
+            services.AddSingleton<ICategoryRepository, CategoryRepository> ();
+            services.AddSingleton<ICategoryService, CategoryService> ();
+
             services.AddScoped<IProductService, ProductService> ();
             services.AddScoped<IProductDetailService, ProductDetailService> ();
             services.AddSingleton<IMapper> (_ => AutoMapperConfig.GetMapper ());

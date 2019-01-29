@@ -9,7 +9,7 @@ namespace Store.Core.Services
     {
         Task<ProductDTO> GetAsync(string name);
         Task<IEnumerable<string>> GetnamesAsync();
-        Task AddAsync(string name, decimal price);
+        Task AddAsync(string name, decimal price, DateTime publishedAt, bool featured);
         Task RemoveAsync(string name);
     }
 }
