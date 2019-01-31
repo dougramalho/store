@@ -1,6 +1,7 @@
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Store.Core.Services;
+using Store.Core.Services.Blog;
 
 namespace Store.Api.Controllers {
     [Route ("api/[controller]")]

@@ -2,11 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using AutoMapper;
-using Store.Core.Domain;
+using Entities = Store.Core.Domain; 
 using Store.Core.DTO;
-using Store.Core.Repositories;
+using Store.Core.Repositories.Blog;
 
-namespace Store.Core.Services {
+namespace Store.Core.Services.Blog {
     public class BlogService : IBlogService {
         private readonly IBlogRepository _blogRepository;
         private readonly IMapper _mapper;
@@ -17,7 +17,7 @@ namespace Store.Core.Services {
         }
 
         public async Task AddAsync (string text, DateTime publishedAt) {
-            await _blogRepository.AddAsync (new BlogPost (Guid.NewGuid (), text, publishedAt));
+            await _blogRepository.AddAsync (new Entities.BlogPost (Guid.NewGuid (), text, publishedAt));
         }
 
         public async Task<BlogPostDTO> GetAsync (Guid id) {
@@ -25,9 +25,14 @@ namespace Store.Core.Services {
             return _mapper.Map<BlogPostDTO> (post);
         }
 
+        public Task<IEnumerable<BlogPostDTO>> GetLatestPostsAsync()
+        {
+            throw new NotImplementedException();
+        }
+
         public async Task<IEnumerable<BlogPostDTO>> GetPostsAsync () {
             var posts = await _blogRepository.GetPostsAsync();
-            return _mapper.Map<IEnumerable<BlogPost>, IEnumerable<BlogPostDTO>>(posts);
+            return _mapper.Map<IEnumerable<Entities.BlogPost>, IEnumerable<BlogPostDTO>>(posts);
         }
     }
 }

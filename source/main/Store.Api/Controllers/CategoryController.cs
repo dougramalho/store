@@ -1,6 +1,7 @@
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Store.Core.Services;
+using Store.Core.Services.Category;
 
 namespace Store.Api.Controllers
 {

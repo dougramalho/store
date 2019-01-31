@@ -6,8 +6,9 @@ using AutoMapper;
 using Store.Core.Domain;
 using Store.Core.DTO;
 using Store.Core.Repositories;
+using Store.Core.Repositories.Product;
 
-namespace Store.Core.Services
+namespace Store.Core.Services.Product
 {
     public class ProductDetailService : IProductDetailService
     {

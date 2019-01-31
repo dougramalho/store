@@ -3,6 +3,9 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Options;
 using Store.Core.Domain;
 using Store.Core.Repositories;
+using Store.Core.Repositories.Blog;
+using Store.Core.Repositories.Category;
+using Store.Core.Repositories.Product;
 
 namespace Store.Api {
     public class StoreMockBuilder : IStoreMockBuilder {

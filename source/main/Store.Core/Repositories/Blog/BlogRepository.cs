@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Store.Core.Domain;
 
-namespace Store.Core.Repositories {
+namespace Store.Core.Repositories.Blog {
     public class BlogRepository : IBlogRepository {
         private readonly ISet<BlogPost> _posts = new HashSet<BlogPost> ();
 

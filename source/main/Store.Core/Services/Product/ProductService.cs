@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
-using Store.Core.Domain;
+using Entities = Store.Core.Domain; 
 using Store.Core.DTO;
 using Store.Core.Repositories;
+using Store.Core.Repositories.Product;
+using Store.Core.Domain;
 
-namespace Store.Core.Services
+namespace Store.Core.Services.Product
 {
     public class ProductService : IProductService
     {
@@ -39,11 +41,21 @@ namespace Store.Core.Services
                 throw new StoreException("product_already_exists", $"Product: {name} already exists.");
             }
             
-            product = new Product(Guid.NewGuid(), name, price, publishedAt, featured);
+            product = new Entities.Product(Guid.NewGuid(), name, price, publishedAt, featured);
             await _productRepository.AddAsync(product);
         }
 
         public async Task RemoveAsync(string name)
         => await _productRepository.RemoveAsync(name);
+
+        public Task<IEnumerable<ProductDTO>> GetLatestAsync()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<IEnumerable<ProductDTO>> GetFeaturedAsync()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

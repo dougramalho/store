@@ -1,4 +1,4 @@
-namespace Store.Core.Repositories
+namespace Store.Core.Repositories.Cart
 {
     public interface ICartRepository
     {

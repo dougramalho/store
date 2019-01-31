@@ -1,15 +1,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Store.Core.Domain;
+using Entities = Store.Core.Domain; 
 
-namespace Store.Core.Repositories
+namespace Store.Core.Repositories.Category
 {
     public class CategoryRepository : ICategoryRepository
     {
-        private readonly ISet<Category> _categories = new HashSet<Category>();
+        private readonly ISet<Entities.Category> _categories = new HashSet<Entities.Category>();
 
-        public async Task AddAsync(Category categorie)
+        public async Task AddAsync(Entities.Category categorie)
         {
             _categories.Add(categorie);
             await Task.CompletedTask;

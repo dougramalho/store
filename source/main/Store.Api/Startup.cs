@@ -13,7 +13,13 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Store.Core.Mappers;
 using Store.Core.Repositories;
+using Store.Core.Repositories.Blog;
+using Store.Core.Repositories.Category;
+using Store.Core.Repositories.Product;
 using Store.Core.Services;
+using Store.Core.Services.Blog;
+using Store.Core.Services.Category;
+using Store.Core.Services.Product;
 
 namespace Store.Api {
     public class Startup {

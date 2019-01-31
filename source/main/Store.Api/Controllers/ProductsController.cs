@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Store.Core.DTO;
 using Store.Core.Services;
+using Store.Core.Services.Product;
 
 namespace Store.Api.Controllers {
     [Route ("api/[controller]")]
