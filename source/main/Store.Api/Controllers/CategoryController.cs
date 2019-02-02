@@ -16,7 +16,7 @@ namespace Store.Api.Controllers
 
         [HttpGet ("")]
         public async Task<IActionResult> Get () {
-            var categories = await _categoryService.GetCategoriesAsync ();
+            var categories = await _categoryService.GetAsync ();
             return Json (categories);
         }
     }

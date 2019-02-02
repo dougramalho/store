@@ -25,9 +25,10 @@ namespace Store.Core.Services.Blog {
             return _mapper.Map<BlogPostDTO> (post);
         }
 
-        public Task<IEnumerable<BlogPostDTO>> GetLatestPostsAsync()
+        public async Task<IEnumerable<BlogPostDTO>> GetLatestPostsAsync(int quantity)
         {
-            throw new NotImplementedException();
+            var posts = await _blogRepository.GetPostsAsync(quantity);
+            return _mapper.Map<IEnumerable<Entities.BlogPost>, IEnumerable<BlogPostDTO>>(posts);
         }
 
         public async Task<IEnumerable<BlogPostDTO>> GetPostsAsync () {

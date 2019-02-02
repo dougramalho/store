@@ -13,5 +13,8 @@ namespace Store.Core.Repositories.Product
         Task AddAsync(Entities.Product product);
         Task UpdateAsync(Entities.Product product);
         Task RemoveAsync(string name);
+
+        Task<IEnumerable<Entities.Product>> GetLatestAsync(int quantity);
+        Task<IEnumerable<Entities.Product>> GetFeaturedAsync(int quantity);
     }
 }

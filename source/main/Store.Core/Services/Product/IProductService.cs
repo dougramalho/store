@@ -12,7 +12,7 @@ namespace Store.Core.Services.Product
         Task AddAsync(string name, decimal price, DateTime publishedAt, bool featured);
         Task RemoveAsync(string name);
 
-        Task<IEnumerable<ProductDTO>> GetLatestAsync();
-        Task<IEnumerable<ProductDTO>> GetFeaturedAsync();
+        Task<IEnumerable<ProductDTO>> GetLatestAsync(int quantity);
+        Task<IEnumerable<ProductDTO>> GetFeaturedAsync(int quantity);
     }
 }

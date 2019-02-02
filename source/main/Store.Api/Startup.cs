@@ -14,10 +14,12 @@ using Microsoft.Extensions.Options;
 using Store.Core.Mappers;
 using Store.Core.Repositories;
 using Store.Core.Repositories.Blog;
+using Store.Core.Repositories.Cart;
 using Store.Core.Repositories.Category;
 using Store.Core.Repositories.Product;
 using Store.Core.Services;
 using Store.Core.Services.Blog;
+using Store.Core.Services.Cart;
 using Store.Core.Services.Category;
 using Store.Core.Services.Product;
 
@@ -33,6 +35,9 @@ namespace Store.Api {
         public void ConfigureServices (IServiceCollection services) {
             services.AddMvc ().SetCompatibilityVersion (CompatibilityVersion.Version_2_2);
 
+            services.AddSingleton<ICartService, CartService> ();
+            services.AddSingleton<ICartRepository, CartRepository> ();
+            
             services.AddSingleton<IProductRepository, ProductRepository> ();
             services.AddSingleton<IBlogRepository, BlogRepository> ();
             services.AddSingleton<IBlogService, BlogService> ();

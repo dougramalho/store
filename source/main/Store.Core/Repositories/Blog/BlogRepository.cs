@@ -15,6 +15,6 @@ namespace Store.Core.Repositories.Blog {
 
         public async Task<BlogPost> GetAsync (Guid id) => await Task.FromResult(_posts.FirstOrDefault(x => x.Id == id));
 
-        public async Task<IEnumerable<BlogPost>> GetPostsAsync () => await Task.FromResult (_posts);
+        public async Task<IEnumerable<BlogPost>> GetPostsAsync (int quantity = int.MaxValue) => await Task.FromResult (_posts.Take(quantity));
     }
 }

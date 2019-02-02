@@ -12138,11 +12138,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "e:\\Projetos\\store\\source\\main\\Store.Api\\Store.Api.csproj",
+      "projectUniqueName": "E:\\Projetos\\store\\source\\main\\Store.Api\\Store.Api.csproj",
       "projectName": "Store.Api",
-      "projectPath": "e:\\Projetos\\store\\source\\main\\Store.Api\\Store.Api.csproj",
+      "projectPath": "E:\\Projetos\\store\\source\\main\\Store.Api\\Store.Api.csproj",
       "packagesPath": "C:\\Users\\Douglas\\.nuget\\packages\\",
-      "outputPath": "e:\\Projetos\\store\\source\\main\\Store.Api\\obj\\",
+      "outputPath": "E:\\Projetos\\store\\source\\main\\Store.Api\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -12161,8 +12161,8 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "e:\\Projetos\\store\\source\\main\\Store.Core\\Store.Core.csproj": {
-              "projectPath": "e:\\Projetos\\store\\source\\main\\Store.Core\\Store.Core.csproj"
+            "E:\\Projetos\\store\\source\\main\\Store.Core\\Store.Core.csproj": {
+              "projectPath": "E:\\Projetos\\store\\source\\main\\Store.Core\\Store.Core.csproj"
             }
           }
         }

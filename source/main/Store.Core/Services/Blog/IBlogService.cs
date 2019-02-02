@@ -12,6 +12,6 @@ namespace Store.Core.Services.Blog
 
         Task<IEnumerable<BlogPostDTO>> GetPostsAsync ();
 
-        Task<IEnumerable<BlogPostDTO>> GetLatestPostsAsync ();
+        Task<IEnumerable<BlogPostDTO>> GetLatestPostsAsync (int quantity);
     }
 }

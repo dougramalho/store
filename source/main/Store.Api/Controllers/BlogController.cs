@@ -17,5 +17,11 @@ namespace Store.Api.Controllers {
             var posts = await _blogService.GetPostsAsync ();
             return Json (posts);
         }
+
+        [HttpGet ("latest")]
+        public async Task<IActionResult> Getlatest () {
+            var posts = await _blogService.GetLatestPostsAsync (3);
+            return Json (posts);
+        }
     }
 }

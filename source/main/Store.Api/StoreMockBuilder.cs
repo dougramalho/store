@@ -4,6 +4,7 @@ using Microsoft.Extensions.Options;
 using Store.Core.Domain;
 using Store.Core.Repositories;
 using Store.Core.Repositories.Blog;
+using Store.Core.Repositories.Cart;
 using Store.Core.Repositories.Category;
 using Store.Core.Repositories.Product;
 
@@ -12,19 +13,32 @@ namespace Store.Api {
         private readonly IProductRepository _productRepository;
         private readonly IBlogRepository _blogRepository;
         private readonly ICategoryRepository _categoryRepository;
+        private readonly ICartRepository _cartRepository;
+
         public StoreMockBuilder (IProductRepository productRepository,
             IBlogRepository blogRepository,
-            ICategoryRepository categoryRepository) {
+            ICategoryRepository categoryRepository,
+            ICartRepository cartRepository) {
 
             _productRepository = productRepository;
             _blogRepository = blogRepository;
             _categoryRepository = categoryRepository;
+            _cartRepository = cartRepository;
         }
 
         public void Mock () {
             MockProducts ();
             MockPosts ();
             MockCategories ();
+            MockCart();
+        }
+
+        private void MockCart(){
+            Guid id = new Guid("64d9cb37-eb78-46b8-8ab8-115c0c6a0547");
+
+            _cartRepository.Create(id);
+            var product = _productRepository.GetAsync("High Heel");
+            _cartRepository.AddItem(id, product.Result);
         }
 
         private void MockProducts () {
@@ -62,18 +76,18 @@ namespace Store.Api {
         }
 
         private void MockPosts () {
-            _blogRepository.AddAsync (new BlogPost (Guid.NewGuid (), "Neque porro quisquam est qui dolorem ipsum", DateTime.Now, new Category (Guid.NewGuid (), "Fashion")));
-            _blogRepository.AddAsync (new BlogPost (Guid.NewGuid (), "Neque porro quisquam est qui dolorem ipsum", DateTime.Now, new Category (Guid.NewGuid (), "Fashion")));
-            _blogRepository.AddAsync (new BlogPost (Guid.NewGuid (), "Neque porro quisquam est qui dolorem ipsum", DateTime.Now, new Category (Guid.NewGuid (), "Fashion")));
+            _blogRepository.AddAsync (new BlogPost (Guid.NewGuid (), "Neque porro quisquam est qui dolorem ipsum", DateTime.Now, "Fashion"));
+            _blogRepository.AddAsync (new BlogPost (Guid.NewGuid (), "Neque porro quisquam est qui dolorem ipsum", DateTime.Now, "Fashion"));
+            _blogRepository.AddAsync (new BlogPost (Guid.NewGuid (), "Neque porro quisquam est qui dolorem ipsum", DateTime.Now, "Fashion"));
         }
 
         private void MockCategories () {
-            _categoryRepository.AddAsync (new Category (Guid.NewGuid (), "Down Jackets"));
-            _categoryRepository.AddAsync (new Category (Guid.NewGuid (), "Hoodies"));
-            _categoryRepository.AddAsync (new Category (Guid.NewGuid (), "Suits"));
-            _categoryRepository.AddAsync (new Category (Guid.NewGuid (), "Jeans"));
-            _categoryRepository.AddAsync (new Category (Guid.NewGuid (), "Casual Pants"));
-            _categoryRepository.AddAsync (new Category (Guid.NewGuid (), "Sunglass"));
+            _categoryRepository.AddAsync (new Category (Guid.NewGuid (), "Down Jackets", false));
+            _categoryRepository.AddAsync (new Category (Guid.NewGuid (), "Hoodies", false));
+            _categoryRepository.AddAsync (new Category (Guid.NewGuid (), "Suits", false));
+            _categoryRepository.AddAsync (new Category (Guid.NewGuid (), "Jeans", false));
+            _categoryRepository.AddAsync (new Category (Guid.NewGuid (), "Casual Pants", false));
+            _categoryRepository.AddAsync (new Category (Guid.NewGuid (), "Sunglass", false));
         }
 
     }

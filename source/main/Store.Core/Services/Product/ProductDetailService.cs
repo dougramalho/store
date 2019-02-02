@@ -26,13 +26,6 @@ namespace Store.Core.Services.Product
             var product = await _productRepository.GetOrFailAsync(productName);
             List<ProductDetailDTO> detailsList = new List<ProductDetailDTO>();
 
-            // foreach (var item in product.Details)
-            // {
-            //     detailsList.Add(_mapper.Map<ProductDetailDTO>(item));
-            // }
-
-            //var teste = detailsList.ProjectTo()
-
             return _mapper.Map<IEnumerable<ProductDetail>, IEnumerable<ProductDetailDTO>>(product.Details);
         }
 

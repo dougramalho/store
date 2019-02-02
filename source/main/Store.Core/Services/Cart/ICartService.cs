@@ -8,7 +8,7 @@ namespace Store.Core.Services.Cart
 {
     public interface ICartService
     {
-         Task AddAsync(Guid id, Entities.Product product);
+         Task AddAsync (Guid id, string productName);
          Task CreateAsync(Guid id);
          Task<decimal> GetTotalAsync(Guid id);
          Task<IEnumerable<ProductDTO>> GetItemsAsync(Guid id);

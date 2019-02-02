@@ -7,6 +7,8 @@ namespace Store.Core.Repositories.Category
     public interface ICategoryRepository
     {
          Task AddAsync(Entities.Category categorie);
-         Task<IEnumerable<string>> GetCategorieAsync();
+         Task<IEnumerable<string>> GetAsync();
+
+         Task<IEnumerable<string>> GetFeaturedAsync();
     }
 }

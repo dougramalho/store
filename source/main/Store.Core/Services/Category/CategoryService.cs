@@ -12,15 +12,12 @@ namespace Store.Core.Services.Category {
             _repository = repository;
         }
 
-        public async Task AddAsync (string category) {
-            await _repository.AddAsync (new Entities.Category (Guid.NewGuid (), category));
+        public async Task AddAsync (string category, bool featured) {
+            await _repository.AddAsync (new Entities.Category (Guid.NewGuid (), category, featured));
         }
 
-        public async Task<IEnumerable<string>> GetAsync () => await _repository.GetCategorieAsync ();
+        public async Task<IEnumerable<string>> GetAsync () => await _repository.GetAsync ();
 
-        public Task<IEnumerable<string>> GetFeaturedAsync()
-        {
-            throw new NotImplementedException();
-        }
+        public async Task<IEnumerable<string>> GetFeaturedAsync() => await _repository.GetFeaturedAsync ();
     }
 }

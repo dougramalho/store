@@ -48,14 +48,18 @@ namespace Store.Core.Services.Product
         public async Task RemoveAsync(string name)
         => await _productRepository.RemoveAsync(name);
 
-        public Task<IEnumerable<ProductDTO>> GetLatestAsync()
+        public async Task<IEnumerable<ProductDTO>> GetLatestAsync(int quantity)
         {
-            throw new NotImplementedException();
+            var products = await _productRepository.GetLatestAsync(quantity);
+
+            return _mapper.Map<IEnumerable<ProductDTO>>(products);
         }
 
-        public Task<IEnumerable<ProductDTO>> GetFeaturedAsync()
+        public async Task<IEnumerable<ProductDTO>> GetFeaturedAsync(int quantity)
         {
-            throw new NotImplementedException();
+            var products = await _productRepository.GetFeaturedAsync(quantity);
+
+            return _mapper.Map<IEnumerable<ProductDTO>>(products);
         }
     }
 }

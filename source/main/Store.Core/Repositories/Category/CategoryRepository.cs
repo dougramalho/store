@@ -15,6 +15,8 @@ namespace Store.Core.Repositories.Category
             await Task.CompletedTask;
         }
 
-        public async Task<IEnumerable<string>> GetCategorieAsync() => await Task.FromResult(_categories.Select(x => x.Name));
+        public async Task<IEnumerable<string>> GetAsync() => await Task.FromResult(_categories.Select(x => x.Name));
+
+        public async Task<IEnumerable<string>> GetFeaturedAsync() => await Task.FromResult(_categories.Where(x => x.Featured).Select(x => x.Name));
     }
 }

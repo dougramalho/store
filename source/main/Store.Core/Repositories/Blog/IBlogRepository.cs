@@ -8,6 +8,6 @@ namespace Store.Core.Repositories.Blog {
         Task<BlogPost> GetAsync (Guid id);
         Task AddAsync (BlogPost post);
 
-        Task<IEnumerable<BlogPost>> GetPostsAsync ();
+        Task<IEnumerable<BlogPost>> GetPostsAsync (int quantity = int.MaxValue);
     }
 }

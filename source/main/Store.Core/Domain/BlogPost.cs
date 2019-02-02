@@ -5,7 +5,7 @@ namespace Store.Core.Domain {
         public string Text { get; protected set; }
         public DateTime PublishedAt { get; protected set; }
 
-        public Category Category { get; protected set; }
+        public string Category { get; protected set; }
 
         protected BlogPost(){}
 
@@ -15,12 +15,12 @@ namespace Store.Core.Domain {
             Id = id;
         }
 
-        public BlogPost(Guid id, string text, DateTime publishedAt, Category category)
+        public BlogPost(Guid id, string text, DateTime publishedAt, string category)
         : this(id, text, publishedAt){
             Category = category;
         }
 
-        public void AddCategory(Category category){
+        public void AddCategory(string category){
             Category = category;
         }
     }
