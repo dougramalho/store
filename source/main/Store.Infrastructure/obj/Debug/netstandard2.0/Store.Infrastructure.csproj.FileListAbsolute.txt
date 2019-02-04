@@ -1,0 +1,12 @@
+E:\Projetos\store\source\main\Store.Infrastructure\bin\Debug\netstandard2.0\Store.Infrastructure.deps.json
+E:\Projetos\store\source\main\Store.Infrastructure\bin\Debug\netstandard2.0\Store.Infrastructure.dll
+E:\Projetos\store\source\main\Store.Infrastructure\bin\Debug\netstandard2.0\Store.Infrastructure.pdb
+E:\Projetos\store\source\main\Store.Infrastructure\bin\Debug\netstandard2.0\Store.Domain.dll
+E:\Projetos\store\source\main\Store.Infrastructure\bin\Debug\netstandard2.0\Store.Domain.pdb
+E:\Projetos\store\source\main\Store.Infrastructure\obj\Debug\netstandard2.0\Store.Infrastructure.csprojAssemblyReference.cache
+E:\Projetos\store\source\main\Store.Infrastructure\obj\Debug\netstandard2.0\Store.Infrastructure.csproj.CoreCompileInputs.cache
+E:\Projetos\store\source\main\Store.Infrastructure\obj\Debug\netstandard2.0\Store.Infrastructure.AssemblyInfoInputs.cache
+E:\Projetos\store\source\main\Store.Infrastructure\obj\Debug\netstandard2.0\Store.Infrastructure.AssemblyInfo.cs
+E:\Projetos\store\source\main\Store.Infrastructure\obj\Debug\netstandard2.0\Store.Infrastructure.csproj.CopyComplete
+E:\Projetos\store\source\main\Store.Infrastructure\obj\Debug\netstandard2.0\Store.Infrastructure.dll
+E:\Projetos\store\source\main\Store.Infrastructure\obj\Debug\netstandard2.0\Store.Infrastructure.pdb
