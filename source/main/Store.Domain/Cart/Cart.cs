@@ -1,22 +1,22 @@
 using System;
 using System.Collections.Generic;
 
-namespace Store.Domain.Cart
+namespace Store.Domain
 {
     public class Cart : Entity
     {
-        private ISet<Store.Domain.Product.Product> _products = new HashSet<Store.Domain.Product.Product> ();
+        private ISet<Product> _products = new HashSet<Product> ();
 
-        public IEnumerable<Store.Domain.Product.Product> Products {
+        public IEnumerable<Product> Products {
             get => _products;
-            set => _products = new HashSet<Store.Domain.Product.Product> ();
+            set => _products = new HashSet<Product> ();
         }
 
         public Cart(Guid id){
             Id = id;
         }
 
-        public void AddProduct(Store.Domain.Product.Product product){
+        public void AddProduct(Product product){
             _products.Add(product);
         }
     }

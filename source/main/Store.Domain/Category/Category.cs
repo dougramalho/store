@@ -1,6 +1,6 @@
 using System;
 
-namespace Store.Domain.Category {
+namespace Store.Domain {
     public class Category : Entity {
         public string Name { get; protected set; }
         public bool Featured {get; protected set;}

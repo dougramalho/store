@@ -10,3 +10,15 @@ E:\Projetos\store\source\main\Store.Infrastructure\obj\Debug\netstandard2.0\Stor
 E:\Projetos\store\source\main\Store.Infrastructure\obj\Debug\netstandard2.0\Store.Infrastructure.csproj.CopyComplete
 E:\Projetos\store\source\main\Store.Infrastructure\obj\Debug\netstandard2.0\Store.Infrastructure.dll
 E:\Projetos\store\source\main\Store.Infrastructure\obj\Debug\netstandard2.0\Store.Infrastructure.pdb
+D:\projetos\store\source\main\Store.Infrastructure\bin\Debug\netstandard2.0\Store.Infrastructure.deps.json
+D:\projetos\store\source\main\Store.Infrastructure\bin\Debug\netstandard2.0\Store.Infrastructure.dll
+D:\projetos\store\source\main\Store.Infrastructure\bin\Debug\netstandard2.0\Store.Infrastructure.pdb
+D:\projetos\store\source\main\Store.Infrastructure\bin\Debug\netstandard2.0\Store.Domain.dll
+D:\projetos\store\source\main\Store.Infrastructure\bin\Debug\netstandard2.0\Store.Domain.pdb
+D:\projetos\store\source\main\Store.Infrastructure\obj\Debug\netstandard2.0\Store.Infrastructure.csprojAssemblyReference.cache
+D:\projetos\store\source\main\Store.Infrastructure\obj\Debug\netstandard2.0\Store.Infrastructure.csproj.CoreCompileInputs.cache
+D:\projetos\store\source\main\Store.Infrastructure\obj\Debug\netstandard2.0\Store.Infrastructure.AssemblyInfoInputs.cache
+D:\projetos\store\source\main\Store.Infrastructure\obj\Debug\netstandard2.0\Store.Infrastructure.AssemblyInfo.cs
+D:\projetos\store\source\main\Store.Infrastructure\obj\Debug\netstandard2.0\Store.Infrastructure.csproj.CopyComplete
+D:\projetos\store\source\main\Store.Infrastructure\obj\Debug\netstandard2.0\Store.Infrastructure.dll
+D:\projetos\store\source\main\Store.Infrastructure\obj\Debug\netstandard2.0\Store.Infrastructure.pdb

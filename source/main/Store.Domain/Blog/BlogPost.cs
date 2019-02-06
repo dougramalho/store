@@ -1,6 +1,6 @@
 using System;
 
-namespace Store.Domain.Blog {
+namespace Store.Domain {
     public class BlogPost : Entity {
         public string Text { get; protected set; }
         public DateTime PublishedAt { get; protected set; }

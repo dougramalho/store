@@ -7,10 +7,10 @@ using Store.Domain.Product;
 namespace Store.Domain.Cart {
     public class CartService : ICartService {
         private readonly ICartRepository _repository;
-        private readonly IProductRepository _productRepository;
+        private readonly Domain.Product.IProductRepository _productRepository;
         private readonly IMapper _mapper;
 
-        public CartService (ICartRepository repository, IProductRepository productRepository, IMapper mapper) {
+        public CartService (ICartRepository repository, Domain.Product.IProductRepository productRepository, IMapper mapper) {
             _repository = repository;
             _productRepository = productRepository;
             _mapper = mapper;
